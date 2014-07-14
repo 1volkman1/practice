@@ -26,5 +26,51 @@ namespace practiceTwo
             double d = Math.PI / 2;
             MessageBox.Show("name is" + name + "\nx is" + x + "\nd is" + d);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int x = 5;
+
+            if (x == 10)
+            {
+                MessageBox.Show("x must be 10");
+            }
+            else
+            {
+                MessageBox.Show("x isn`t be 10");
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int someValue = 4;
+            string name = "Bobbo Jr.";
+
+            if ((someValue == 3) && (name == "Joe"))
+            {
+                MessageBox.Show("x is 3 and the name Joe");
+            }
+            else
+            {
+                MessageBox.Show(" this line runs no matter what");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int count = 0;
+
+            while(count < 10)
+            {
+                count = count + 1;
+            }
+
+            for (int i = 0; i < 5; i++)
+            {
+                count = count - 1;
+            }
+
+            MessageBox.Show(" The answer is " + count);
+        }
     }
 }
