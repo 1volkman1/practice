@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Swap", "Swap\Swap.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hit the key", "Hit the key\Hit the key.csproj", "{FC5AF86D-660C-4A61-8625-CB470B535D4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PattyPlaner", "PattyPlaner\PattyPlaner.csproj", "{F428E655-9B7B-4664-A92A-80509F5B4615}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{FC5AF86D-660C-4A61-8625-CB470B535D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC5AF86D-660C-4A61-8625-CB470B535D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC5AF86D-660C-4A61-8625-CB470B535D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F428E655-9B7B-4664-A92A-80509F5B4615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F428E655-9B7B-4664-A92A-80509F5B4615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F428E655-9B7B-4664-A92A-80509F5B4615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F428E655-9B7B-4664-A92A-80509F5B4615}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
