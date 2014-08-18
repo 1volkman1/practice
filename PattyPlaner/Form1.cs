@@ -17,7 +17,7 @@ namespace PattyPlaner
         public Form1()
         {
             InitializeComponent();
-            dinnerParty = new DinnerParty() ;
+            dinnerParty = new DinnerParty(5,true,false) ;
             dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
             dinnerParty.SetHealthyOption(healthBox.Checked);
             DisplayDinnerPartyCost();

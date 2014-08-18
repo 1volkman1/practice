@@ -9,10 +9,32 @@ namespace PattyPlaner
     class DinnerParty
     {
         const int CostOfFoodPerPerson = 25;
-        private int NumberOfPeople;
+        private int numberOfPeople;
+        public int NumberOfPeople {
+            get
+            {
+                return numberOfPeople;
+            }
+            set
+            { 
+               numberOfPeople = value ;
+               CalculateCostOfDecorations(fancyDecorations);
+            }
+
+        }
+
+        private bool fancyDecorations;
+
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations = 0;
 
+        public DinnerParty(int numberOfPeople, bool healthyOptions, bool fancyDecorations)
+        {
+            NumberOfPeople = numberOfPeople;
+            this.fancyDecorations = fancyDecorations;
+            SetHealthyOption(healthyOptions);
+            CalculateCostOfDecorations(fancyDecorations);
+        }
 
         public void SetHealthyOption(bool healthyOption)
         {
@@ -28,6 +50,7 @@ namespace PattyPlaner
 
         public void CalculateCostOfDecorations(bool fancy)
         {
+            fancyDecorations = fancy;
             if (fancy)
             {
                 CostOfDecorations = (NumberOfPeople * 15.00M) + 50M;
