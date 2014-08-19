@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace PattyPlaner
 {
-    class BirthdayParty
+    class BirthdayParty: Party
     {
         public const int CostOfFoodPerPerson = 25;
 

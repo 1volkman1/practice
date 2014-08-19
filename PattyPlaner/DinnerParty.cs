@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PattyPlaner
 {
-    class DinnerParty
+    class DinnerParty: Party
     {
         const int CostOfFoodPerPerson = 25;
         private int numberOfPeople;
@@ -27,11 +27,13 @@ namespace PattyPlaner
 
         public decimal CostOfBeveragesPerPerson;
         public decimal CostOfDecorations = 0;
+        
+       
 
-        public DinnerParty(int numberOfPeople, bool healthyOptions, bool fancyDecorations)
+        public DinnerParty(int numberOfPeople, bool healthyOptions, bool fancyDecorations): base(numberOfPeople,fancyDecorations)
         {
-            NumberOfPeople = numberOfPeople;
-            this.fancyDecorations = fancyDecorations;
+            //NumberOfPeople = numberOfPeople;
+            //this.fancyDecorations = fancyDecorations;
             SetHealthyOption(healthyOptions);
             CalculateCostOfDecorations(fancyDecorations);
         }
@@ -61,10 +63,10 @@ namespace PattyPlaner
             }
         }
 
-        public decimal CalculatorCost(bool healthyOptions)
+        public decimal CalculateCost(bool healthyOptions)
         {
-            decimal totalCost = CostOfDecorations + ((CostOfBeveragesPerPerson + CostOfDecorations) * NumberOfPeople);
-
+            decimal totalCost = base.CalculateCost() + (CostOfBeveragesPerPerson * NumberOfPeople);
+            
             if (healthyOptions)
             {
                 return totalCost * .95M;
