@@ -9,38 +9,38 @@ namespace PattyPlaner
 {
     class BirthdayParty: Party
     {
-        public const int CostOfFoodPerPerson = 25;
+       // public const int CostOfFoodPerPerson = 25;
 
-        public decimal CostOfDecorations = 0;
-        private bool fancyDecorations;
+//        public decimal CostOfDecorations = 0;
+//        private bool fancyDecorations;
         public int CakeSize;
 
 
-        public BirthdayParty(int numberOfPeople, bool fancyDecorations, string cakeWriting)
+        public BirthdayParty(int numberOfPeople, bool fancyDecorations, string cakeWriting): base ( numberOfPeople, fancyDecorations)
         {
-            this.numberOfPeople = numberOfPeople;
-            this.fancyDecorations = fancyDecorations;
+         //   this.numberOfPeople = numberOfPeople;
+          //  this.fancyDecorations = fancyDecorations;
             CalculateCakeSize();
             this.CakeWriting = cakeWriting;
             CalculateCostOfDecorations(fancyDecorations);
         }
 
-        private int numberOfPeople;
-        public int NumberOfPeople {
+       private int numberOfPeople;
+        public override int NumberOfPeople {
             get
             {
-                return numberOfPeople;
+                return base.NumberOfPeople;
             }
             set
             { 
-               numberOfPeople = value ;
-               CalculateCostOfDecorations(fancyDecorations);
+               base.NumberOfPeople = value ;
+              // CalculateCostOfDecorations(fancyDecorations);
                CalculateCakeSize();
                this.cakeWriting = cakeWriting;
             }
 
         }
-         public void CalculateCostOfDecorations(bool fancy)
+     /*    public void CalculateCostOfDecorations(bool fancy)
         {
             fancyDecorations = fancy;
             if (fancy)
@@ -52,7 +52,7 @@ namespace PattyPlaner
                 CostOfDecorations = (NumberOfPeople * 7.5M) + 30M;
             }
         }
-
+        */
         private void CalculateCakeSize()
         {
             if (NumberOfPeople <= 4)
@@ -85,16 +85,16 @@ namespace PattyPlaner
                     this.cakeWriting = value;
             }
         }
-        public decimal CalculateCost() 
+        public override decimal CalculateCost() 
         {
-            decimal TotalCost = CostOfDecorations + (CostOfFoodPerPerson * NumberOfPeople);
+            //decimal TotalCost = CostOfDecorations + (CostOfFoodPerPerson * NumberOfPeople);
             decimal CakeCost;
 
             if(CakeSize == 8)
                 CakeCost = 40M + cakeWriting.Length *.25M;
             else
                 CakeCost = 75M + cakeWriting.Length* .25M;
-            return TotalCost + CakeCost;
+            return base.CalculateCost() + CakeCost;
         }
     }
 }
