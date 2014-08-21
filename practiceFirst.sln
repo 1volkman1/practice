@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hit the key", "Hit the key\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PattyPlaner", "PattyPlaner\PattyPlaner.csproj", "{F428E655-9B7B-4664-A92A-80509F5B4615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Interface", "Interface\Interface.csproj", "{A4944E60-CC88-45EB-9E96-F528FF20DAA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{F428E655-9B7B-4664-A92A-80509F5B4615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F428E655-9B7B-4664-A92A-80509F5B4615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F428E655-9B7B-4664-A92A-80509F5B4615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4944E60-CC88-45EB-9E96-F528FF20DAA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4944E60-CC88-45EB-9E96-F528FF20DAA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4944E60-CC88-45EB-9E96-F528FF20DAA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4944E60-CC88-45EB-9E96-F528FF20DAA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
